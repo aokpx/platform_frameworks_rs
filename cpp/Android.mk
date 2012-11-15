@@ -20,7 +20,7 @@ LOCAL_MODULE:= libRScpp
 
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_CFLAGS := -Qunused-arguments -Wno-unknown-warning-option
+LOCAL_CFLAGS := $(call-cc-cpp-option,-Qunused-arguments) -Wno-unknown-warning-option
 
 intermediates := $(call intermediates-dir-for,STATIC_LIBRARIES,libRS,TARGET,)
 librs_generated_headers := \
